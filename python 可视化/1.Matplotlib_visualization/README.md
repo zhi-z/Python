@@ -34,7 +34,7 @@ windows墙裂推荐大家使用anaconda
   
 其他的还有图形文本 (Text)、注解 (Annotate)等其他描述
 
-![](./Python_Figure_Structure.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/Python_Figure_Structure.png)
 
 ### 3.画法
 下面以常规图为例，详细记录作图流程及技巧。按照绘图结构，可将数据图的绘制分为如下几个步骤：
@@ -47,7 +47,7 @@ windows墙裂推荐大家使用anaconda
 * 显示、保存绘图结果
 
 下面是一个包含cos、sin、sqrt函数的完整图像：
-![](./img.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/img.png)
 
 #### 3.1导包
 
@@ -103,18 +103,18 @@ plt.plot(x, y3, color='m', linewidth=1.5, linestyle='-', marker='x', label=r'$y 
 * k 黑色
 * w 白色
 
-![](./color.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/color.png)
 
 #### 3.3.2 linestyle 参数
 
 linestyle 参数主要包含虚线、点化虚线、粗虚线、实线，如下：
 
-![](./line_style.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/line_style.png)
 
 #### 3.3.3 marker 参数
 
 marker参数设定在曲线上标记的特殊符号，以区分不同的线段。常见的形状及表示符号如下图所示：
-![](./marks.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/marks.png)
 
 #### 3.4 设置坐标轴
 
@@ -136,7 +136,7 @@ ax.spines['left'].set_position(('data', 0))
 ```
 
 
-![png](output_18_0.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_18_0.png)
 
 
 可通过如下代码，设置刻度尺间隔 lim、刻度标签 ticks
@@ -166,7 +166,7 @@ plt.yticks([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0],
 
 
 
-![png](output_20_1.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_20_1.png)
 
 
 可通过如下代码，设置 X、Y 坐标轴和标题：
@@ -180,14 +180,10 @@ plt.ylabel('y', fontsize=18, labelpad=12.5)
 ```
 
 
-
-
     Text(0,0.5,'y')
 
 
-
-
-![png](output_22_1.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_22_1.png)
 
 
 #### 3.5 设置文字描述、注解
@@ -201,14 +197,10 @@ plt.text(0.8, 0.8, r'$y \in [-1.0, \ 4.0]$', color='k', fontsize=15)
 ```
 
 
-
-
     Text(0.8,0.8,'$y \\in [-1.0, \\ 4.0]$')
 
 
-
-
-![png](output_24_1.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_24_1.png)
 
 
 可通过如下代码，在数据图中给特殊点添加注解 annotate：
@@ -228,7 +220,7 @@ plt.annotate(r'$2\sqrt{2}$', xy=(8, np.sqrt(8)), xytext=(8.5, 2.2), fontsize=16,
 
 plt.legend(['cos(x)', 'sin(x)', 'sqrt(x)'], loc='upper right')
 
-![](./legend.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/legend.png)
 
 #### 3.7 网格线开关
 
@@ -241,7 +233,7 @@ plt.grid(True)
 ```
 
 
-![png](output_31_0.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_31_0.png)
 
 
 #### 3.8 显示与图像保存
@@ -319,28 +311,11 @@ plt.grid(True)
 plt.show()
 ```
 
-    C:\Users\JH\Anaconda3\lib\site-packages\matplotlib\cbook\deprecation.py:106: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
-      warnings.warn(message, mplDeprecation, stacklevel=1)
-    C:\Users\JH\Anaconda3\lib\site-packages\matplotlib\legend.py:326: UserWarning: Unrecognized location "up right". Falling back on "best"; valid locations are
-    	best
-    	upper right
-    	upper left
-    	lower left
-    	lower right
-    	right
-    	center left
-    	center right
-    	lower center
-    	upper center
-    	center
-    
-      % (loc, '\n\t'.join(self.codes)))
-
-![png](output_35_1.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_35_1.png)
 
 
 ### 5.常用图形
-**详情资料[这里](http://matplotlib.org/api/pyplot_api.html)，看[这里](http://matplotlib.org/api/pyplot_api.html)，看[这里](http://matplotlib.org/api/pyplot_api.html)**
+**详情资料[这里](http://matplotlib.org/api/pyplot_api.html)**
 
 * 曲线图：matplotlib.pyplot.plot(data)
 * 灰度/直方图：matplotlib.pyplot.hist(data)
@@ -359,7 +334,7 @@ plt.plot(x,y)
 
     [<matplotlib.lines.Line2D at 0x1998a71ebe0>]
 
-![png](output_37_1.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_37_1.png)
 
 #### 5.2 直方图
 
@@ -376,7 +351,7 @@ plt.hist(x, bins=10)
              3.37513259]),
      <a list of 10 Patch objects>)
 
-![png](output_38_1.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_38_1.png)
 
 #### 5.3 散点图
 
@@ -390,7 +365,7 @@ plt.scatter(x,y)
 
     <matplotlib.collections.PathCollection at 0x1998bc8c668>
 
-![png](output_39_1.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_39_1.png)
 
 #### 5.4 箱线图
 
@@ -405,7 +380,7 @@ plt.show()
 ```
 
 
-![png](output_40_0.png)
+![png](https://raw.githubusercontent.com/zhi-z/Python/master/python%20%E5%8F%AF%E8%A7%86%E5%8C%96/1.Matplotlib_visualization/README_image/output_40_0.png)
 
 
 ##### 箱式图科普
@@ -414,14 +389,10 @@ plt.show()
 * 中位数
 * 异常值
 * 处理异常值时与3$\sigma$标准的异同：统计边界是否受异常值影响、容忍度的大小
-
-箱子的上边界和下边界（蓝色部分）：Q3 百分之75的分位数，Q1百分之25分位数
-
-两条黑线：上边缘（Q3+1.5*IQR/“箱子高度”）、下边缘（Q1-1.5*IQR/“箱子高度”）、IQR=Q3-Q1，IQR为箱子的高度
-
-两条黑线为临界值/边缘值，如果出现在黑线以外的是小概率事件，可以把它当做异常值。
-
-大多用于表示一维的数据，中间的两条线没意义
+* 箱子的上边界和下边界（蓝色部分）：Q3 百分之75的分位数，Q1百分之25分位数
+* 两条黑线：上边缘（Q3+1.5*IQR/“箱子高度”）、下边缘（Q1-1.5*IQR/“箱子高度”）、IQR=Q3-Q1，IQR为箱子的高度
+* 两条黑线为临界值/边缘值，如果出现在黑线以外的是小概率事件，可以把它当做异常值。
+* 大多用于表示一维的数据，中间的两条线没意义
 
 
 
