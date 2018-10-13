@@ -136,30 +136,33 @@ alter table students change birthday birth date default "2000-01-01";
 ```
 
 - 修改表
-
-    -- alter table 表名 drop 列名;
-    alter table students drop high;
+```
+-- alter table 表名 drop 列名;
+alter table students drop high;
+```
 - 删除表
-
-    -- drop table 表名;
-    -- drop database 数据库;
-    -- drop table 数据表;
-    drop table students;
+```
+-- drop table 表名;
+-- drop database 数据库;
+-- drop table 数据表;
+drop table students;
+```
 ## 3 数据增删改查
 
 ### 3.1 增
 
 - 全列插入
-
-    -- insert [into] 表名 values(...)
-    -- 主键字段 可以用 0  null   default 来占位
-    
-    insert into students values(0, "18", 20, "男", 1, "2000-05-01");
+```
+-- insert [into] 表名 values(...)
+-- 主键字段 可以用 0  null   default 来占位
+insert into students values(0, "18", 20, "男", 1, "2000-05-01");
+```
 向students表插入 一个学生信息：
-
-    insert into students values(0, "小明", 20, "女", 1, "2007-01-01");
-    insert into students values(null, "小明", 20, "女", 1, "2007-01-01");
-    insert into students values(default, "小明", 20, "女", 1, "2007-01-01");
+```
+insert into students values(0, "小明", 20, "女", 1, "2007-01-01");
+insert into students values(null, "小明", 20, "女", 1, "2007-01-01");
+insert into students values(default, "小明", 20, "女", 1, "2007-01-01");
+```
 对于这个执行的效果是一样的，因为id是自增的默认可以写以上的值。
 
 枚举数据：
@@ -174,9 +177,10 @@ insert into students (name, gender) values ("大明", 2);
 ```
 
 - 多行插入
-
-    insert into students (name, gender) values ("李四", 2),("张三", 2);
-    insert into students values(default, "周杰伦", 20, "男", 1, "2000-01-01"), (default, "陈奕迅", 20, "男", 1, "2007-01-01");
+```
+insert into students (name, gender) values ("李四", 2),("张三", 2);
+insert into students values(default, "周杰伦", 20, "男", 1, "2000-01-01"), (default, "陈奕迅", 20, "男", 1, "2007-01-01");
+```
 ### 3.2 改
 
 ```
@@ -197,9 +201,10 @@ select * from students;
 ```
 
 - 条件查询
-
-    select * from students where name="小明"; -- 查询 name为小明的所有信息
-    select * from students where id>3; -- 查询 id大于三的数据
+```
+select * from students where name="小明"; -- 查询 name为小明的所有信息
+select * from students where id>3; -- 查询 id大于三的数据
+```
 - 指定列查询
 
 ```
@@ -208,9 +213,10 @@ select name,gender from students;
 ```
 
 - 使用as为列或者表制定别名进行查询
-
-    -- select 字段[as 别名] , 字段[as 别名] from 数据表 where ....;
-    select name as 姓名,gender as 性别 from students;
+```
+-- select 字段[as 别名] , 字段[as 别名] from 数据表 where ....;
+select name as 姓名,gender as 性别 from students;
+```
 - 字段的顺序
 
 ```
