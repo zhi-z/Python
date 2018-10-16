@@ -28,7 +28,7 @@ django-admin startproject 项目名称
 django-admin startproject test1
 ```
 
-![创建django项目](E:\GitHub\Python\Django\2.创建项目\image\p2_1.png)
+![创建django项目](https://raw.githubusercontent.com/zhi-z/Python/master/Django/2.%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/image/p2_1.png)
 
 接下来可以使用IDE打开此目录，开发项目了，此处使用pycharm打开test1目录。
 
@@ -43,7 +43,7 @@ tree
 
 目录结构如下图：
 
-![创建django项目](E:\GitHub\Python\Django\2.创建项目\image\p2_2.png)
+![创建django项目](https://raw.githubusercontent.com/zhi-z/Python/master/Django/2.%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/image/p2_2.png)
 
 - manage.py是项目管理文件，通过它管理项目。
 - 与项目同名的目录，此处为test1。
@@ -62,7 +62,7 @@ tree
 python manage.py startapp booktest
 ```
 
-![应用默认目录结构](E:\GitHub\Python\Django\2.创建项目\image\p2_3.png)
+![应用默认目录结构](https://raw.githubusercontent.com/zhi-z/Python/master/Django/2.%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/image/p2_3.png)
 
 - _*init.py_*是一个空文件，表示当前目录booktest可以当作一个python包使用。
 - tests.py文件用于开发测试用例，在实际开发中会有专门的测试人员，这个事情不需要我们来做。
@@ -77,7 +77,7 @@ python manage.py startapp booktest
 
 初始项目的INSTALLED_APPS如下图：
 
-![安装前](images/p2_4.png)
+![安装前](https://raw.githubusercontent.com/zhi-z/Python/master/Django/2.%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/image/p2_4.png)
 
 接下来在元组中添加一个新的项，当前示例为booktest
 
@@ -85,7 +85,7 @@ python manage.py startapp booktest
 'booktest',
 ```
 
-![安装后](images/p2_5.png)
+![安装后](https://raw.githubusercontent.com/zhi-z/Python/master/Django/2.%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/image/p2_5.png)
 
 #### 5 开发服务器
 
@@ -103,9 +103,11 @@ python manage.py runserver
 
 服务器成功启动后如下图：
 
-![服务器](images/p2_6.png)
+![服务器](https://raw.githubusercontent.com/zhi-z/Python/master/Django/2.%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/image/p2_6.png)
 
 紧接着在浏览器中输入网址“127.0.0.1:8000”，或者按着ctrl键点击上图中标示出来的地址，可以查看当前站点开发效果。
+
+![](https://raw.githubusercontent.com/zhi-z/Python/master/Django/2.%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/image/p2_7.png)
 
 > 如果增加、修改、删除文件，服务器会自动重启;
 > 按ctrl+c停止服务器。
