@@ -16,7 +16,7 @@ V全拼为View，用于封装结果，生成页面展示的html内容。
 
 C全拼为Controller，用于接收请求，处理业务逻辑，与Model和View交互，返回结果。
 
-![](E:\GitHub\Python\Django\MVC框架\image\mvc.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/Django/1.Django%E8%BD%AF%E4%BB%B6%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/image/mvc.png)
 
 #### 3 Django简介
 
@@ -38,7 +38,7 @@ T全拼为Template，与MVC中的V功能相同，负责封装构造要返回的h
 
 - 差异就在于黑线黑箭头标识出来的部分
 
-![](E:\GitHub\Python\Django\MVC框架\image\mvt.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/Django/1.Django%E8%BD%AF%E4%BB%B6%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/image/mvt.png)
 
 
 
