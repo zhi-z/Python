@@ -36,3 +36,13 @@ urlpatterns = [
 # r'^$' 正则化表达式，如果符合第一个参数的正则表达式，那么久执行url中第二个参数的内容。
 url(r'^$', views.index),
 ```
+
+
+Django MySQL数据库配置：
+
+在settings.py中的DATABASES进行配置：
+
+
+
+
+
