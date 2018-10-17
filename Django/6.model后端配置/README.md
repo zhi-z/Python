@@ -17,13 +17,13 @@ django-admin startproject python_django
 
 创建完成后项目的目录如下：
 
-![](E:\GitHub\Python\Django\6.model后端配置\image\create_project.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/Django/6.model%E5%90%8E%E7%AB%AF%E9%85%8D%E7%BD%AE/image/create_project.png)
 
 ### 2 配置
 
 打开python_django/settings.py，默认使用的是sqlite3数据库，如图所示
 
-![](E:\GitHub\Python\Django\6.model后端配置\image\default_settings.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/Django/6.model%E5%90%8E%E7%AB%AF%E9%85%8D%E7%BD%AE/image/default_settings.png)
 
 修改为MySQL数据库，实现的代码如下：
 
@@ -42,7 +42,7 @@ DATABASES = {
 }
 ```
 
-> 注意：数据库test2 Django框架不会自动生成，需要我们自己进入mysql数据库去创建。 
+> 注意：数据库test_db Django框架不会自动生成，需要我们自己进入mysql数据库去创建。 
 
 接着在python_django\_\_init\_\_.py中进行配置，需要加入如下两行代码：
 
@@ -52,5 +52,7 @@ DATABASES = {
 > import pymysql
 > pymysql.install_as_MySQLdb()
 > ```
+
+
 
 完成配置。
