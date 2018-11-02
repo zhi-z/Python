@@ -4,7 +4,7 @@
 
 Django中的中间件是一个轻量级、底层的插件系统，可以介入Django的请求和响应处理过程，修改Django的输入或输出。 中间件的执行过程如下图所示：
 
-![](images\middleware.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/Django/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/images/middleware.png)
 
 ## 2 中间件函数
 
