@@ -2,6 +2,8 @@
 
 ## 1 简介
 
+在Django中叫做国际化，对Django中的字符进行汉化只是其中的一部分。
+
 Django 支持国际化，多语言。Django的国际化是默认开启的，如果您不需要国际化支持，那么您可以在您的设置文件中设置 USE_I18N = False，那么Django会进行一些优化，不加载国际化支持机制。
 
 NOTE: 18表示Internationalization这个单词首字母I和结尾字母N之间的字母有18个。I18N就是Internationalization（国际化）的意思。
