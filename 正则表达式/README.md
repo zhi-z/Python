@@ -10,7 +10,7 @@
 
 当你要匹配 **一个/多个/任意个 数字/字母/非数字/非字母/某几个字符/任意字符**，想要 **贪婪/非贪婪** 匹配，想要捕获匹配出来的 **第一个/所有** 内容的时候，可以参考以下的小抄。
 
-![](C:\Users\DataH\Desktop\GitHub\Python\正则表达式\image\positive_expression_syntax.jpg)
+![](image\positive_expression_syntax.jpg)
 
 - 验证工具：https://regexr.com/
 - 正则表达式练习：https://alf.nu/RegexGolf
