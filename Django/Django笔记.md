@@ -46,7 +46,7 @@ Django MySQL数据库配置：
 
 
 
-![1539760010141](E:\GitHub\Python\Django\image\url_create.png)
+![1539760010141](image\url_create.png)
 
 
 
