@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changge password</title>
+</head>
+<body>
+<form method="post" action="/change_pwd_action">
+	{% csrf_token %}
+	new password:<input type="password" name="pwd">
+	<input type="submit" name="confirm">
+</form>
+</body>
+</html>
