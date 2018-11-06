@@ -15,7 +15,7 @@
 
 `cookie` 执行的过程如下图所示：
 
-![](images\cookie.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/Django/Cookie%E5%92%8CSession/images/cookie.png)
 
 ### 1.1  设置cookie
 
@@ -80,13 +80,13 @@ http://127.0.0.1:8000/cookie_get/
 
 - session执行的过程如下图所示：
 
-![session](images\session.png)
+![session](https://raw.githubusercontent.com/zhi-z/Python/master/Django/Cookie%E5%92%8CSession/images/session.png)
 
 在使用Session后，会在Cookie中存储一个sessionid的数据，每次请求时浏览器都会将这个数据发给服务器，服务器在接收到sessionid后，会根据这个值找出这个请求者的Session。如果想使用Session，浏览器必须支持Cookie，否则就无法使用Session了。存储Session时，键与Cookie中的sessionid相同，值是开发人员设置的键值对信息，进行了base64编码，过期时间由开发人员设置。
 
 - Django项目默认启用Session，在settings.py文件，在项MIDDLEWARE中启用Session中间件，如图所示：
 
-![](images\session_middleware.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/Django/Cookie%E5%92%8CSession/images/session_middleware.png)
 
 ### 2.1 存储方式 
 
@@ -112,7 +112,7 @@ SESSION_ENGINE='django.contrib.sessions.backends.cached_db'
 
 - 如果存储在数据库中，需要在项`INSTALLED_APPS`中安装`Session`应用，迁移后会在数据库中创建出存储Session的表 ，如图所示：
 
-![](images\session_table.png)
+![](https://raw.githubusercontent.com/zhi-z/Python/master/Django/Cookie%E5%92%8CSession/images/session_table.png)
 
 
 
