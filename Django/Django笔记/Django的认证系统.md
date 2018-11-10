@@ -1,5 +1,3 @@
-# 转自[Django的认证系统](https://www.cnblogs.com/liwenzhou/p/9030211.html)
-
 # Django自带的用户认证
 
 我们在开发一个网站的时候，无可避免的需要设计实现网站的用户系统。此时我们需要实现包括用户注册、用户登录、用户认证、注销、修改密码等功能，这还真是个麻烦的事情呢。
@@ -227,3 +225,7 @@ AUTH_USER_MODEL = "app名.UserInfo"
 再次注意：
 
 一旦我们指定了新的认证系统所使用的表，我们就需要重新在数据库中创建该表，而不能继续使用原来默认的auth_user表了。
+
+
+
+转自：[Django的认证系统](https://www.cnblogs.com/liwenzhou/p/9030211.html)
