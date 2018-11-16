@@ -1,6 +1,6 @@
-# [彻底理解cookie，session，token](https://www.cnblogs.com/moyand/p/9047978.html)
+# 彻底理解cookie，session，token
 
-## 发展史
+## 1 发展史
 
 1、很久很久以前，Web 基本上就是文档的浏览而已， 既然是浏览，作为服务器， 不需要记录谁在某一段时间里都浏览了什么文档，每次请求都是一个新的HTTP协议， 就是请求加响应，  尤其是我不用记住是谁刚刚发了HTTP请求，   每个请求对我来说都是全新的。这段时间很嗨皮
 
@@ -30,11 +30,7 @@
 
 可是如果不保存这些session id ,  怎么验证客户端发给我的session id 的确是我生成的呢？  如果不去验证，我们都不知道他们是不是合法登录的用户， 那些不怀好意的家伙们就可以伪造session id , 为所欲为了。
 
- 
-
 嗯，对了，关键点就是验证 ！
-
- 
 
 比如说， 小F已经登录了系统， 我给他发一个令牌(token)， 里边包含了小F的 user id， 下一次小F 再次通过Http 请求访问我的时候， 把这个token 通过Http header 带过来不就可以了。
 
@@ -54,25 +50,19 @@
 
 Token 中的数据是明文保存的（虽然我会用Base64做下编码， 但那不是加密）， 还是可以被别人看到的， 所以我不能在其中保存像密码这样的敏感信息。
 
- 
-
 当然， 如果一个人的token 被别人偷走了， 那我也没办法， 我也会认为小偷就是合法用户， 这其实和一个人的session id 被别人偷走是一样的。
-
- 
 
 这样一来， 我就不保存session id 了， 我只是生成token , 然后验证token ，  我用我的CPU计算时间获取了我的session 存储空间 ！
 
- 
-
 解除了session id这个负担，  可以说是无事一身轻， 我的机器集群现在可以轻松地做水平扩展， 用户访问量增大， 直接加机器就行。   这种无状态的感觉实在是太好了！
 
-## Cookie
+## 2 Cookie
 
 cookie 是一个非常具体的东西，指的就是浏览器里面能永久存储的一种数据，仅仅是浏览器实现的一种数据存储功能。
 
 cookie由服务器生成，发送给浏览器，浏览器把cookie以kv形式保存到某个目录下的文本文件内，下一次请求同一网站时会把该cookie发送给服务器。由于cookie是存在客户端上的，所以浏览器加入了一些限制确保cookie不会被恶意使用，同时不会占据太多磁盘空间，所以每个域的cookie数量是有限的。
 
-## Session
+## 3 Session
 
 session 从字面上讲，就是会话。这个就类似于你和一个人交谈，你怎么知道当前和你交谈的是张三而不是李四呢？对方肯定有某种特征（长相等）表明他就是张三。
 
@@ -80,7 +70,7 @@ session 也是类似的道理，服务器要知道当前发请求给自己的是
 
 服务器使用session把用户的信息临时保存在了服务器上，用户离开网站后session会被销毁。这种用户信息存储方式相对cookie来说更安全，可是session有一个缺陷：如果web服务器做了负载均衡，那么下一个操作请求到了另一台服务器的时候session会丢失。
 
-## Token
+## 4 Token
 
 在Web领域基于Token的身份验证随处可见。在大多数使用Web API的互联网公司中，tokens 是多用户下处理认证的最佳方式。
 
@@ -94,31 +84,9 @@ session 也是类似的道理，服务器要知道当前发请求给自己的是
 
  4.安全
 
- 
-
-那些使用基于Token的身份验证的大佬们
-
-大部分你见到过的API和Web应用都使用tokens。例如Facebook, Twitter, Google+, GitHub等。
-
- 
-
-Token的起源
-
-在介绍基于Token的身份验证的原理与优势之前，不妨先看看之前的认证都是怎么做的。
-
-　　基于服务器的验证
-
-　  我们都是知道HTTP协议是无状态的，这种无状态意味着程序需要验证每一次请求，从而辨别客户端的身份。
-
-在这之前，程序都是通过在服务端存储的登录信息来辨别请求的。这种方式一般都是通过存储Session来完成。
-
-下图展示了基于服务器验证的原理
-
- 
+那些使用基于Token的身份验证的大佬们，大部分你见到过的API和Web应用都使用tokens。例如Facebook, Twitter, Google+, GitHub等。
 
 随着Web，应用程序，已经移动端的兴起，这种验证的方式逐渐暴露出了问题。尤其是在可扩展性方面。
-
- 
 
 基于服务器验证方式暴露的一些问题
 
@@ -168,10 +136,6 @@ Token的起源
 
 4.服务器端采用filter过滤器校验。校验成功则返回请求数据，校验失败则返回错误码
 
- 
-
- 
-
 当我们在程序中认证了信息并取得token之后，我们便能通过这个Token做许多的事情。
 
 我们甚至能基于创建一个基于权限的token传给第三方应用程序，这些第三方程序能够获取到我们的数据（当然只有在我们允许的特定的token）
@@ -211,7 +175,7 @@ Having our API just serve data, we can also make the design choice to serve asse
 只要用户有一个通过了验证的token，数据和资源就能够在任何域上被请求到。
 
 ```
-          Access-Control-Allow-Origin: *       
+Access-Control-Allow-Origin: *       
 ```
 
 基于标准
@@ -219,3 +183,7 @@ Having our API just serve data, we can also make the design choice to serve asse
 创建token的时候，你可以设定一些选项。我们在后续的文章中会进行更加详尽的描述，但是标准的用法会在JSON Web Tokens体现。
 
 最近的程序和文档是供给JSON Web Tokens的。它支持众多的语言。这意味在未来的使用中你可以真正的转换你的认证机制。
+
+
+
+转载：[彻底理解cookie，session，token](https://www.cnblogs.com/moyand/p/9047978.html)
