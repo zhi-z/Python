@@ -12,12 +12,12 @@ sudo service mysql start    # 开启服务
 ps ajx | grep mysql    
 ```
 通过如上命令,如果有如下图的红框部分,那么就说明安装MySQL成功.
-![在这里插入图片描述](E:\GitHub\Python\MySQL\MySQL安装\image\start_sql.png)
+![在这里插入图片描述](image\start_sql.png)
  登陆mysql数据库可以通过如下命令：
     mysql -uroot -p密码
 
 -u 表示选择登陆的用户名， -p 表示登陆的用户密码，上面命令输入之后会提示输入密码，此时输入密码就可以登录到mysql。
-![](E:\GitHub\Python\MySQL\MySQL安装\image\logn.png)
+![](image\logn.png)
 接着通过selct version()获取客户端版本信息，如上图所示。
 
 

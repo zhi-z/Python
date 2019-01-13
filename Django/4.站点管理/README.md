@@ -135,3 +135,6 @@ class HeroInfoAdmin(admin.ModelAdmin):
 admin.site.register(BookInfo,BookInfoAdmin)
 admin.site.register(HeroInfo,HeroInfoAdmin)
 ```
+## 5 站定重命名
+
+默认站点显示的是“Django 管理”，所以需要重新命名。

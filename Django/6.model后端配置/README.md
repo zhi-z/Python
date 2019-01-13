@@ -53,6 +53,14 @@ DATABASES = {
 > pymysql.install_as_MySQLdb()
 > ```
 
+登录mysql数据库:mysql –uroot –p 
 
+查看有哪些数据库:show databases
+
+创建数据库:create database test2 **charset=utf8;** **#****切记:指定编码**
+
+使用数据库：use test2;
+
+查看数据库中的表：show tables;
 
 完成配置。

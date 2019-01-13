@@ -9,7 +9,7 @@
 ```
 python manage.py shell  
 
-from django.contrib.auth.models import User        
+from django.contrib.auth.models import User
 
 user =User.objects.get(username='admin')
 

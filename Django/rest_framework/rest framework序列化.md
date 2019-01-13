@@ -100,8 +100,6 @@ class PublishView(APIView):
 序列化代码：
 
 ```
-# by luffycity.com
-
 from rest_framework import serializers
 
 from app01.models import *
@@ -192,9 +190,6 @@ class BookModelSerializers(serializers.ModelSerializer):
     #     book.authors.add(*validated_data["authors"])
     #
     #     return book
-
-
-
 ```
 
 使用系列化返回数据，提供api：
