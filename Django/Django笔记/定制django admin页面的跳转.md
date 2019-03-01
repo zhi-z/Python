@@ -4,17 +4,11 @@
 
 默认django admin会跳转到changelist_view页面
 
- 
-
-\------------------------------
-
 下面的代码是django1.6的
 
- 
+
 
 下面是一个可行的做法,写admin model的时候重写父类admin.ModelAdmin的change_view 方法
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 from django.contrib import admin
@@ -24,10 +18,6 @@ class MyAdmin(admin.ModelAdmin):
         result_template['location'] = '/dest/url'
         return result_template           
 ```
-
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
- 
 
 可以看到,就是调用ModelAdmin的change_view得到结果,然后给 result_template做了一个这个操作
 
