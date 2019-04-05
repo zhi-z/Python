@@ -61,6 +61,21 @@ use mysql_demo_100;
 -- drop database 数据库名;
 drop database mysql_demo_100;
 ```
+- 创建用户和授权
+
+```
+创建用户：
+    create user 'hiram'@'192.168.1.1' identified by '123123';
+    create user 'hiram'@'192.168.1.%' identified by '123123';
+    create user 'hiram'@'%' identified by '123123';
+授权：
+	权限  人
+        grant select,insert,update  on db1.t1 to 'hiram'@'%';
+        grant all privileges  on db1.t1 to 'hiram'@'%';
+
+        revoke all privileges on db1.t1 from 'hiram'@'%';
+```
+
 ## 2 数据表操作
 
 - 查看当前所有表
