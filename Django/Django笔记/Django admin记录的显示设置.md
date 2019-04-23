@@ -23,3 +23,11 @@ print(instance)
 ```
 
 在Django中，如果用的是Python3的话就只能用__str__方法，如果是Python2的话就使用__unicode__方法。因为更安全一些。
+
+- 注意：如果使用以上方法在删除记录的时候有时候会报错，需要改成如下：
+
+```
+def __str__(self):
+   return ('<%s:%s>' % (self.__class__.__name__, self.name))
+```
+
